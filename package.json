@@ -2,25 +2,38 @@
     "name": "dom-to-image",
     "version": "2.6.0",
     "description": "Generates an image from a DOM node using HTML5 canvas and SVG",
-    "main": "src/dom-to-image.js",
-    "dependencies": {},
+    "main": "dist/dom-to-image.js",
+    "module": "dist/dom-to-image.es.js",
+    "files": [
+        "dist"
+    ],
+    "types": "dist/index.d.ts",
+    "dependencies": {
+        "remove": "^0.1.5"
+    },
     "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.5.0",
+        "@typescript-eslint/parser": "^2.5.0",
         "chai": "^2.2.0",
-        "grunt": "~0.4.5",
-        "grunt-cli": "^1.2.0",
-        "grunt-contrib-jshint": "^0.11.2",
-        "grunt-contrib-uglify": "^0.9.1",
-        "grunt-contrib-watch": "^0.6.1",
-        "grunt-karma": "^1.0.0",
+        "eslint": "^6.5.1",
+        "eslint-config-google": "^0.14.0",
         "karma": "^0.13.22",
         "karma-chai": "^0.1.0",
         "karma-chrome-launcher": "^0.1.8",
         "karma-firefox-launcher": "^0.1.4",
         "karma-mocha": "^0.1.10",
         "karma-mocha-reporter": "^1.3.0",
-        "mocha": "^2.2.4"
+        "mocha": "^2.2.4",
+        "rollup": "^1.25.2",
+        "rollup-plugin-terser": "^5.1.2",
+        "rollup-plugin-typescript2": "^0.24.3",
+        "tslib": "^1.10.0",
+        "typescript": "^3.8.0-dev.20191024"
     },
     "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -cw",
+        "lint": "eslint ./*.js src/*.ts spec/*.js",
         "test": "./node_modules/.bin/grunt test"
     },
     "repository": {

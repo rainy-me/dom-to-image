@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "lib": [
+            "es2020",
+            "dom"
+        ],
+        "target": "es2020",
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        "declaration": true,
+        "declarationDir": "./dist",
+        "noImplicitAny": true,
+        "allowJs": false,
+        "removeComments": true
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
